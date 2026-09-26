@@ -26,7 +26,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenMenu, showBack, title }) =
   return (
     <View
       className="bg-white border-b border-border z-30 px-4"
-      style={{ paddingTop: Math.max(insets.top, 12), paddingBottom: 12 }}
+      style={{ paddingTop: Math.max( 4), paddingBottom: 12 }}
     >
       <View className="flex-row items-center justify-between">
         {/* Left Section: Back button or Logo */}

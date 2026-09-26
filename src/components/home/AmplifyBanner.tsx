@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
 import { icons } from '@/constants/icons';
+import { colors } from '@/constants/colors';
 
 export const AmplifyBanner: React.FC = () => {
   const router = useRouter();
@@ -22,8 +23,8 @@ export const AmplifyBanner: React.FC = () => {
       <View className="space-y-2.5">
         <TouchableOpacity
           activeOpacity={0.85}
-          onPress={() => router.push('/(tabs)/explore')}
-          className="bg-white py-3 px-5 rounded-xl flex-row items-center justify-center shadow-xs active:bg-slate-100"
+          onPress={() => router.push("/(tabs)/explore")}
+          className="bg-white py-2 px-5 rounded-xl flex-row items-center justify-center shadow-xs active:bg-slate-100"
         >
           <Text className="text-sm font-bold text-primary mr-2">
             Start Your Campaign
@@ -34,13 +35,14 @@ export const AmplifyBanner: React.FC = () => {
 
         <TouchableOpacity
           activeOpacity={0.85}
-          onPress={() => router.push('/(tabs)/profile' as any)}
-          className="bg-black/20 border border-white/30 py-3 px-5 rounded-xl flex-row items-center justify-center active:bg-black/30 mt-2"
+          onPress={() => router.push("/(tabs)/profile" as any)}
+          className="bg-red-500 border border-white/30 py-3 px-5 rounded-xl flex-row items-center justify-center active:bg-black/30 mt-2"
         >
           {/* TODO: Replace with icons.phone from @/constants/icons */}
           <PhoneIcon className="w-4 h-4 text-white mr-2" />
-          <Text className="text-sm font-bold text-white">
-            Talk to an Expert
+          <Text className="text-sm font-bold text-black">
+            {" "}
+            Talk to an expert
           </Text>
         </TouchableOpacity>
       </View>
