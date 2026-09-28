@@ -1,23 +1,23 @@
-import React, { useEffect } from 'react';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import * as SplashScreen from 'expo-splash-screen';
+import { AppProvider } from "@/context/AppContext";
 import {
-  useFonts,
   Nunito_400Regular,
   Nunito_500Medium,
   Nunito_600SemiBold,
   Nunito_700Bold,
   Nunito_800ExtraBold,
-} from '@expo-google-fonts/nunito';
+  useFonts,
+} from "@expo-google-fonts/nunito";
 import {
   Poppins_400Regular,
   Poppins_500Medium,
   Poppins_600SemiBold,
   Poppins_700Bold,
-} from '@expo-google-fonts/poppins';
-import { AppProvider } from '@/context/AppContext';
-import '../global.css';
+} from "@expo-google-fonts/poppins";
+import { Stack } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
+import { StatusBar } from "expo-status-bar";
+import React, { useEffect } from "react";
+import "../global.css";
 
 // Prevent splash screen from hiding until fonts are loaded
 SplashScreen.preventAutoHideAsync().catch(() => {
@@ -55,17 +55,18 @@ export default function RootLayout() {
       <Stack
         screenOptions={{
           headerShown: false,
-          contentStyle: { backgroundColor: '#FFFFFF' },
-          animation: 'slide_from_right',
+          contentStyle: { backgroundColor: "#FFFFFF" },
+          animation: "slide_from_right",
         }}
       >
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="listing/[id]" options={{ headerShown: false }} />
+        <Stack.Screen name="pricing" options={{ headerShown: false }} />
         <Stack.Screen
           name="cart"
           options={{
             headerShown: false,
-            presentation: 'modal',
+            presentation: "modal",
           }}
         />
       </Stack>

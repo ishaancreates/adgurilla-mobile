@@ -29,6 +29,8 @@ export const NavigationMenuModal: React.FC<NavigationMenuModalProps> = ({
       router.push("/for-media-owner" as any);
     } else if (path === "/for-ad-agency") {
       router.push("/for-ad-agency" as any);
+    } else if (path === "/pricing") {
+      router.push("/pricing" as any);
     } else if (path === "/cart") {
       router.push("/cart" as any);
     } else {
@@ -98,7 +100,7 @@ export const NavigationMenuModal: React.FC<NavigationMenuModalProps> = ({
               </TouchableOpacity>
 
               <TouchableOpacity
-                onPress={() => navigateTo("/explore")}
+                onPress={() => navigateTo("/pricing")}
                 className="py-3 px-3 rounded-lg hover:bg-muted"
               >
                 <Text className="text-base font-semibold text-foreground">
@@ -112,7 +114,7 @@ export const NavigationMenuModal: React.FC<NavigationMenuModalProps> = ({
           <View className="pt-4 border-t border-border mb-6">
             <TouchableOpacity
               activeOpacity={0.85}
-              onPress={() => navigateTo("/explore")}
+              onPress={() => navigateTo("/pricing")}
               className="bg-primary py-3.5 px-4 rounded-xl flex-row items-center justify-center shadow-sm"
             >
               <Text className="text-sm font-bold text-white mr-2">
